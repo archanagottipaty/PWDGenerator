@@ -119,12 +119,11 @@ clickBank.addEventListener('click', function (){
 });
 
 
-// Copy btn funtion with alerts 
 
 function myFunction() {
   var copyText = document.getElementById('pwd');
   copyText.select();
   copyText.setSelectionRange(0, 99999); 
   document.execCommand("copy");
-  alert("Copied password : " + copyText.value);
+  // alert("Copied password : " + copyText.value);
 }
