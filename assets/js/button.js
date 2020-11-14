@@ -7,13 +7,15 @@ let clickSimple = document.getElementById('simple');
 let clickWifi = document.getElementById('wifi');
 let clickSocials = document.getElementById('socials');
 let clickImpossible = document.getElementById('impossible');
+let clickBank = document.getElementById('bank');
+
+
 
 // stores the fetched data in array
 let wordBank = [];
 let nounBank = [];
 let adjBank = [];
 let verbBank = [];
-
 
 // randomWord Button
 clickW.addEventListener('click', function () {
@@ -58,19 +60,25 @@ clickDefault.addEventListener('click', function (){
 });
 
 clickSimple.addEventListener('click', function (){
+    specialEvent();
     wordEvent();
     specialEvent();
     adjectiveEvent();
     numEvent();
     numEvent();
     specialEvent();
+    specialEvent();
 });
 
 clickWifi.addEventListener('click', function (){
+    numEvent();
+    numEvent();
     verbEvent();
     nounEvent();
     nounEvent();
     specialEvent();
+    numEvent();
+    numEvent();
 
 });
 
@@ -101,3 +109,22 @@ clickImpossible.addEventListener('click', function (){
     numEvent();
     numEvent();
 });
+
+clickBank.addEventListener('click', function (){
+  numEvent();
+  verbEvent();
+  numEvent();
+  adjectiveEvent();
+  specialEvent();
+});
+
+
+// Copy btn funtion with alerts 
+
+function myFunction() {
+  var copyText = document.getElementById('pwd');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  document.execCommand("copy");
+  alert("Copied password : " + copyText.value);
+}
